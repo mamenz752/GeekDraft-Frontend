@@ -31,7 +31,6 @@ const config: Config = {
         "geek-green-60": "#02B84B",
         "geek-green-80": "#018235",
         "geek-green-100": "#015020",
-
         "geek-blue-20": "#72BBF2",
         "geek-blue-40": "#43A4EE",
         "geek-blue-60": "#178CEB",
@@ -51,6 +50,9 @@ const config: Config = {
       },
       fontFamily: {
         noto: ['var(--font-noto)']
+      },
+      backgroundImage: {
+        "geek-purple-btn-gradient": 'linear-gradient(to right, #9D72F2, #5E17EB)'
       }
     },
   },
