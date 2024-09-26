@@ -18,11 +18,11 @@ export default function EntrancePresenter() {
           <li>- 記事のネタ探しにも最適</li>
         </ul>
       </div>
-      <button className="mt-16 px-16 py-8 bg-geek-purple-btn-gradient font-noto text-xl text-white tracking-wider shadow-lg rounded-md">
-        <Link href="/">
+      <Link href="/login">
+        <button className="mt-16 px-16 py-8 bg-geek-purple-btn-gradient font-noto text-xl text-white tracking-wider shadow-lg rounded-md">
           今すぐはじめる
-        </Link>
-      </button>
+        </button>
+      </Link>
     </div>
   );
 }
