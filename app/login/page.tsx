@@ -19,7 +19,7 @@ const LoginPresenter = () => {
             <li>- 記事のネタ探しにも最適</li>
         </ul>
       </div> */}
-      <Link href="/">
+      <Link href="/dashboard">
         <button className="mt-16 px-8 py-4 bg-geek-white-btn-gradient font-noto text-lg text-geek-black tracking-wider shadow-lg rounded-md">
           <div className="flex items-center gap-4">
             <GoogleIcon />
