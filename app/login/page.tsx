@@ -1,9 +1,13 @@
+"use client"
+
 import Image from "next/image"
 import Logo from "@/app/public/GeekDraft_logo.png"
-import Link from "next/link"
 import GoogleIcon from "../public/icons/GoogleIcon"
+import { signIn } from "next-auth/react"
 
 const LoginPresenter = () => {
+
+
   return (
     <div className="flex flex-col justify-center items-center">
       <Image
@@ -19,14 +23,15 @@ const LoginPresenter = () => {
             <li>- 記事のネタ探しにも最適</li>
         </ul>
       </div> */}
-      <Link href="/dashboard">
-        <button className="mt-16 px-8 py-4 bg-geek-white-btn-gradient font-noto text-lg text-geek-black tracking-wider shadow-lg rounded-md">
-          <div className="flex items-center gap-4">
-            <GoogleIcon />
-            Googleアカウントでログイン
-          </div>
-        </button>
-      </Link>
+      <button
+        className="mt-16 px-8 py-4 bg-geek-white-btn-gradient font-noto text-lg text-geek-black tracking-wider shadow-lg rounded-md"
+        onClick={() => signIn("google")}
+      >
+        <div className="flex items-center gap-4">
+          <GoogleIcon />
+          Googleアカウントでログイン
+        </div>
+      </button>
     </div>
   )
 }
