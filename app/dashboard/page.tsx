@@ -1,32 +1,12 @@
-"use client"
+import { SessionProvider } from 'next-auth/react'
+import DashboardPresenter from './Dashboard'
 
-import { useSession, signOut } from "next-auth/react"
-import Link from "next/link"
-
-const DashboardPresenter = () => {
-  const {data: session} = useSession();
-
-  if (session) {
-    return (
-      <div>
-          <p>login: {session?.user?.name}</p>
-          <Link href="/login">
-          <button
-            className="p-8"
-            onClick={() => signOut()}
-          >
-              ログアウト
-          </button>
-          </Link>
-      </div>
-    )
-  }
-
+const Administrator = () => {
   return (
-    <>
-     <p>Not login</p>
-    </>
+    <SessionProvider>
+      <DashboardPresenter />
+    </SessionProvider>
   )
 }
 
-export default DashboardPresenter
+export default Administrator
