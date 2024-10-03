@@ -52,7 +52,8 @@ const config: Config = {
         noto: ['var(--font-noto)']
       },
       backgroundImage: {
-        "geek-purple-btn-gradient": 'linear-gradient(to right, #9D72F2, #5E17EB)'
+        "geek-purple-btn-gradient": 'linear-gradient(to right, #9D72F2, #5E17EB)',
+        "geek-white-btn-gradient": 'linear-gradient(to right, #FAFAFA, #EDEDED)'
       }
     },
   },
