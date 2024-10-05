@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 import ProductLogo from "@/app/public/ProductLogo"
 import Profile from "@/app/public/dummy_profile.png"
@@ -7,6 +9,8 @@ import IdeaMemoIcon from './icons/IdeaMemoIcon'
 import InterestIcon from './icons/InterestIcon'
 
 import { M_PLUS_1 } from 'next/font/google'
+import ProfileMenu from './ProfileMenu'
+import { useState } from 'react'
 
 export const m_plus_1 = M_PLUS_1({
     subsets: ["latin"],
@@ -16,6 +20,12 @@ export const m_plus_1 = M_PLUS_1({
 })
 
 const Header = () => {
+    const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+
+    const handleProfileMenuOpen = () => {
+        setIsProfileMenuOpen(!isProfileMenuOpen);
+    }
+
   return (
     <header className="w-full h-20 flex items-center justify-center gap-8 shadow-md fixed z-30">
         <Link href="/dashboard">
@@ -23,6 +33,7 @@ const Header = () => {
         </Link>
         <nav className="flex items-center gap-8">
             <ul className="flex items-center gap-6">
+                {/* TODO: コンポーネントを分割・Hover実装 */}
                 <li className="w-48 h-full after:absolute after:w-48 after:h-1 after:bottom-3 after:bg-geek-purple-btn-gradient after:rounded-lg">
                     <Link href="/dashboard" className="p-2 flex items-center justify-center gap-4">
                         <DashboardIcon />
@@ -43,9 +54,11 @@ const Header = () => {
                 </li>
             </ul>
             <button
+                onClick={handleProfileMenuOpen}
             >
                 <Image src={ Profile } alt="logo" width={100} height={100} className="w-12 h-12 rounded-full" />
             </button>
+            <ProfileMenu isProfileMenuOpen={isProfileMenuOpen} />
         </nav>
     </header>
   )
