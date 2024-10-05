@@ -3,13 +3,14 @@
 import { useSession, signOut } from "next-auth/react"
 import Link from "next/link"
 
-const DashboardPresenter = () => {
+const Dashboard = () => {
   const {data: session} = useSession();
 
   if (session) {
     return (
-      <div>
+      <div className="absolute top-24 z-10">
           <p>login: {session?.user?.name}</p>
+          <p>email: {session?.user?.email}</p>
           <Link href="/login">
           <button
             className="p-8"
@@ -27,10 +28,10 @@ const DashboardPresenter = () => {
   }
 
   return (
-    <>
+    <div className="absolute top-24">
      <p>Not login</p>
-    </>
+    </div>
   )
 }
 
-export default DashboardPresenter
+export default Dashboard
