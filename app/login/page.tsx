@@ -1,20 +1,15 @@
 "use client"
 
-import Image from "next/image"
-import Logo from "@/app/public/GeekDraft_logo.png"
 import GoogleIcon from "../public/icons/GoogleIcon"
 import { signIn } from "next-auth/react"
+import ProductLogo from "../public/ProductLogo"
 
 const LoginPresenter = () => {
 
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <Image
-        src={ Logo }
-        alt={"GeekDraftのロゴ"}
-        width={500}
-      />
+      <ProductLogo className="w-[500px]" />
       {/* <div>
         <h2 className="font-bold text-geek-purple-60"># ちょっとGeekになった気分</h2>
         <ul className="mt-4 text-geek-gray-80">

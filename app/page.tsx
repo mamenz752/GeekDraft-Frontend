@@ -1,15 +1,10 @@
-import Image from "next/image";
-import Logo from "@/app/public/GeekDraft_logo.png"
 import Link from "next/link";
+import ProductLogo from "./public/ProductLogo";
 
 export default function EntrancePresenter() {
   return (
     <div className="flex flex-col justify-center items-center">
-      <Image
-        src={ Logo }
-        alt={"GeekDraftのロゴ"}
-        width={500}
-      />
+      <ProductLogo className="w-[500px]" />
       <div>
         <h2 className="font-bold text-geek-purple-60"># ちょっとGeekになった気分</h2>
         <ul className="mt-4 text-geek-gray-80">

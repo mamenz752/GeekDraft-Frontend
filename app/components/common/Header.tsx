@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Logo from "@/app/public/GeekDraft_logo.png"
+import ProductLogo from "@/app/public/ProductLogo"
 import Profile from "@/app/public/dummy_profile.png"
 import Link from 'next/link'
 import DashboardIcon from './icons/DashboardIcon'
@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className="w-full h-20 flex items-center justify-center gap-8 shadow-md fixed z-30">
         <Link href="/dashboard">
-            <Image src={ Logo } alt="logo" className="w-56 h-24" />
+            <ProductLogo className="w-52 h-20" />
         </Link>
         <nav className="flex items-center gap-8">
             <ul className="flex items-center gap-6">
@@ -42,7 +42,8 @@ const Header = () => {
                     </Link>
                 </li>
             </ul>
-            <button>
+            <button
+            >
                 <Image src={ Profile } alt="logo" width={100} height={100} className="w-12 h-12 rounded-full" />
             </button>
         </nav>
