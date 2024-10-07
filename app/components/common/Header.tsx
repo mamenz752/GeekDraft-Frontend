@@ -11,6 +11,7 @@ import InterestIcon from './icons/InterestIcon'
 import { M_PLUS_1 } from 'next/font/google'
 import ProfileMenu from './ProfileMenu'
 import { useState } from 'react'
+import { useSession } from 'next-auth/react'
 
 export const m_plus_1 = M_PLUS_1({
     subsets: ["latin"],
@@ -21,6 +22,7 @@ export const m_plus_1 = M_PLUS_1({
 
 const Header = () => {
     const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+    const {data: session} = useSession();
 
     const handleProfileMenuOpen = () => {
         setIsProfileMenuOpen(!isProfileMenuOpen);
@@ -56,7 +58,10 @@ const Header = () => {
             <button
                 onClick={handleProfileMenuOpen}
             >
-                <Image src={ Profile } alt="logo" width={100} height={100} className="w-12 h-12 rounded-full" />
+                { session?.user?.image ?
+                    <Image src={ session?.user?.image } alt="logo" width={100} height={100} className="w-12 h-12 rounded-full" /> :
+                    <Image src={ Profile } alt="logo" width={100} height={100} className="w-12 h-12 rounded-full" />
+                }
             </button>
             <ProfileMenu isProfileMenuOpen={isProfileMenuOpen} />
         </nav>
