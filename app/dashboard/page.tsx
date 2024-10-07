@@ -1,17 +1,14 @@
 import { SessionProvider } from 'next-auth/react'
-// import { auth } from "../../auth"
-// import { getSession } from 'next-auth/react'
-import DashboardPresenter from './Dashboard'
-// import { useEffect } from 'react';
+import Dashboard from './Dashboard'
+import Header from '../components/common/Header'
 
-const Administrator = () => {
-  // const session = getSession();
-
+const DashboardPresenter = () => {
   return (
     <SessionProvider>
-      <DashboardPresenter />
+      <Header />
+      <Dashboard />
     </SessionProvider>
   )
 }
 
-export default Administrator
+export default DashboardPresenter

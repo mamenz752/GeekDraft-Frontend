@@ -46,15 +46,16 @@ const config: Config = {
         "geek-gray-60": "#888888",
         "geek-gray-80": "#6D6D6D",
         "geek-gray-100": "#6D6D6D",
-        "geek-black": "#191919"
+        "geek-black": "#191919",
       },
       fontFamily: {
-        noto: ['var(--font-noto)']
+        noto: ['var(--font-noto)'],
+        "m-plus": ["M PLUS 1", "sans-serif"],
       },
       backgroundImage: {
         "geek-purple-btn-gradient": 'linear-gradient(to right, #9D72F2, #5E17EB)',
         "geek-white-btn-gradient": 'linear-gradient(to right, #FAFAFA, #EDEDED)'
-      }
+      },
     },
   },
   plugins: [],

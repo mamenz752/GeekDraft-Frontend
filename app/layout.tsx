@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${noto.variable} text-geek-black`}
+        className={`${noto.variable} text-geek-black mx-auto`}
       >
         {children}
       </body>
