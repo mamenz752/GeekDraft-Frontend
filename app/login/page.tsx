@@ -18,7 +18,7 @@ const LoginPresenter = () => {
         </div> */}
       <button
         className="mt-16 px-8 py-4 bg-geek-white-btn-gradient font-noto text-lg text-geek-black tracking-wider shadow-lg rounded-md"
-        onClick={() => signIn("google")}
+        onClick={() => signIn("google", {callbackUrl: "/dashboard"})}
       >
         <div className="flex items-center gap-4">
           <GoogleIcon />
