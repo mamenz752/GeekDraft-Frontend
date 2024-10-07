@@ -5,7 +5,7 @@ const InterestsPresenter = () => {
   return (
     <SessionProvider>
       <Header />
-      <p>インタレストのページです</p>
+      <p className="absolute top-24">インタレストのページです</p>
     </SessionProvider>
   )
 }

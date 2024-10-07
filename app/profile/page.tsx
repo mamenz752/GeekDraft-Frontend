@@ -1,13 +1,13 @@
 import { SessionProvider } from "next-auth/react"
 import Header from "../components/common/Header"
 
-const MemosPresenter = () => {
+const ProfilePresenter = () => {
   return (
     <SessionProvider>
       <Header />
-      <p className="absolute top-24">アイデアメモのページです</p>
+      <p className="absolute top-24">プロフィールのページです</p>
     </SessionProvider>
   )
 }
 
-export default MemosPresenter
+export default ProfilePresenter
