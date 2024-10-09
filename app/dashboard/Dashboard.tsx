@@ -1,6 +1,7 @@
 "use client"
 
 import { useSession } from "next-auth/react"
+import DashboardCalendar from "./DashboardCalendar"
 
 const Dashboard = () => {
   const {data: session} = useSession();
@@ -8,8 +9,7 @@ const Dashboard = () => {
   return (
     session ?
       <div className="absolute top-24">
-        <p>login: {session?.user?.name}</p>
-        <p>email: {session?.user?.email}</p>
+        <DashboardCalendar />
       </div>
       :
       <div className="absolute top-24">
