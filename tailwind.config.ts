@@ -54,7 +54,8 @@ const config: Config = {
       },
       backgroundImage: {
         "geek-purple-btn-gradient": 'linear-gradient(to right, #9D72F2, #5E17EB)',
-        "geek-white-btn-gradient": 'linear-gradient(to right, #FAFAFA, #EDEDED)'
+        "geek-white-btn-gradient": 'linear-gradient(to right, #FAFAFA, #EDEDED)',
+        "geek-orange-tag-gradient": 'linear-gradient(to right, #F2BD72, #EB9617)',
       },
     },
   },
