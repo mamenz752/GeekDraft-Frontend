@@ -27,7 +27,7 @@ const Header = () => {
     }
 
   return (
-    <header className="w-full h-20 flex items-center justify-center gap-8 shadow-md fixed z-30">
+    <header className="w-full h-20 bg-white flex items-center justify-center gap-8 shadow-md fixed z-30">
         <Link href="/dashboard">
             <ProductLogo className="w-52 h-20" />
         </Link>
