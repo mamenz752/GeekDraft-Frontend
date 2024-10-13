@@ -7,8 +7,11 @@ declare module 'react-calendar-heatmap' {
     }
   
     interface CalendarHeatmapProps {
+      startDate?: Date;
+      endDate?: Date;
       values: Value[];
       classForValue?: (value: Value) => string;
+      tooltipDataAttrs?: (value: Value) => { [key: string]: string };
       // 他のプロパティも必要に応じて追加してください
     }
   

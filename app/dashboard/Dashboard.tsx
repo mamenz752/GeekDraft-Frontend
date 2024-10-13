@@ -8,7 +8,7 @@ const Dashboard = () => {
 
   return (
     session ?
-      <div className="absolute top-24">
+      <div className="absolute top-24 left-[20%] right-[20%]">
         <DashboardCalendar />
       </div>
       :
